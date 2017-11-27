@@ -1,8 +1,8 @@
-FROM akshmakov/linuxgsm:base
+FROM gameservermanagers/linuxgsm-docker:latest
 
-LABEL maintainer="akshmakov@gmail.com"
+LABEL maintainer="LinuxGSM <me@danielgibbs.co.uk>"
 
-RUN linuxgsm q3server && \
-	yes Y | q3server install
+RUN ./linuxgsm.sh q3server && \
+	./q3server auto-install
 
-CMD q3server start
+CMD ./q3server start
