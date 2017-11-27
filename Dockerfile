@@ -1,4 +1,4 @@
-FROM gameservermanagers/linuxgsm-docker:latest
+FROM linuxgsm-docker:latest
 
 LABEL maintainer="LinuxGSM <me@danielgibbs.co.uk>"
 
