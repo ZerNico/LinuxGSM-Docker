@@ -1,8 +1,10 @@
 # LinuxGSM Docker
 
+This is under development and not officialy supported yet. However feel free to try it and submit improvements
+
 A docker container distribution of https://github.com/GameServerManagers/LinuxGSM
 
-Dockerhub https://hub.docker.com/r/akshmakov/linuxgsm/
+Dockerhub https://hub.docker.com/r/gameservermanagers/linuxgsm-docker/
 
 Run Game Servers in Docker, multiplex multiple LinuxGSM deployments easily by taking advantage of Dockers port mapping.
 
