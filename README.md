@@ -31,7 +31,7 @@ Lets  build up a local server using just the base image
 
 We will mount the host directory `/srv/lgsm/server1` to the container folder `/home/lgsm` , this will persist all GSM data on the host.
 
-User ID mapping with containers is not-trivial, so this tutorial will use `chmod` workaround for quick host mounted volumes, but this is not ideal. 
+User ID mapping with containers is not-trivial, so this tutorial will use `chmod` workaround for quick host mounted volumes, but this is not ideal.
 
 ```
 # create the host folder
@@ -48,7 +48,7 @@ $ docker run --rm -it -v "/srv/lgsm/server1:/home/lgsm" akshmakov/linuxgsm:base 
 $ linuxgsm q3server
 $ q3server install
 # exit the shell
-$ exit 
+$ exit
 ```
 
 The server is now built up, you can edit the config files from the host or within a shell
@@ -99,7 +99,7 @@ then any extended image may be run as such
 # build the custom image
 $ docker build -tag local/linuxgsm:$SERVERNAME .
 # start the server
-$ docker run -d --name my-custom-server local/linuxgsm:$SERVERNAME 
+$ docker run -d --name my-custom-server local/linuxgsm:$SERVERNAME
 ```
 
 **NOTE:** -t tag not necessary for the specific images
@@ -131,7 +131,7 @@ services:
     image: akshmakov/linuxgsm:q3server
     ports:
       - '27961:27960'
-    tty: true 
+    tty: true
 
   ## custom specific image
   ## assume Dockerfile for this server exists
@@ -179,6 +179,3 @@ These quirks are
 
 
 This Container runs `linuxgsm.sh`  under a generic user `lgsm` and script and server data installed under the home directory `/home/lgsm`
-
-
-
